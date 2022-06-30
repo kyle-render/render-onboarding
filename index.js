@@ -10,7 +10,7 @@ app.get('/', async (req, res) => {
     const data = {
         // Data provided by your application
         // Make your changes here!
-        author: "Adam",
+        author: "Kyle Kelly",
         hits: await getHitCount(),
 
         // Data that your configure via Render: how to connect to managed datastores
@@ -34,7 +34,7 @@ const getHitCount = async () => {
         await client.connect();
         return client.incr("hits")
     } catch (e) {
-        return "(Couldn't connect to datastore)";
+        return "(Couldn't connect to redis)";
     }
 }
 
