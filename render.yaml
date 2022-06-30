@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: onboarding-bp
+    env: node
+    repo: https://github.com/kyle-render/render-onboarding.git
+    buildCommand: npm install
+    startCommand: npm start
+
+  - type: redis
+    name: onboarding-bp-redis
+    ipAllowList: []
